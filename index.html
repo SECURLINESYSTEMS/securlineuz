@@ -7,6 +7,7 @@
 <title>SecurLineUz — Системы безопасности</title>
 
 <style>
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -23,7 +24,7 @@ body {
     color: #111827;
 }
 
-/* HEADER */
+/* ================= HEADER ================= */
 
 header {
     background: #111827;
@@ -79,7 +80,7 @@ header {
     font-size: 14px;
 }
 
-/* HERO */
+/* ================= HERO ================= */
 
 .hero {
     background:
@@ -150,11 +151,16 @@ header {
     color: white;
 }
 
+.button-dark {
+    background: #1f2937;
+    color: white;
+}
+
 .button:hover {
     transform: translateY(-2px);
 }
 
-/* SECTIONS */
+/* ================= SECTIONS ================= */
 
 .section {
     max-width: 1100px;
@@ -176,7 +182,7 @@ header {
     color: #64748b;
 }
 
-/* SERVICES */
+/* ================= SERVICES ================= */
 
 .cards {
     display: grid;
@@ -212,12 +218,52 @@ header {
     line-height: 1.6;
 }
 
-/* OUR WORKS */
+/* ================= WHY US ================= */
+
+.why-section {
+    background: #ffffff;
+    padding: 70px 20px;
+}
+
+.why-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    padding: 30px;
+    border-radius: 22px;
+    background: #f8fafc;
+    border: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.why-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.why-card h3 {
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #64748b;
+    line-height: 1.6;
+}
+
+/* ================= WORKS ================= */
 
 .works-section {
     max-width: 1200px;
     margin: auto;
-    padding: 60px 15px;
+    padding: 65px 15px;
 }
 
 .works-slider {
@@ -252,11 +298,11 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    padding: 55px 30px 28px;
+    padding: 65px 30px 30px;
     color: white;
     background: linear-gradient(
         transparent,
-        rgba(0,0,0,0.85)
+        rgba(0,0,0,0.88)
     );
 }
 
@@ -278,16 +324,11 @@ header {
     height: 48px;
     border: none;
     border-radius: 50%;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.92);
     color: #111827;
     font-size: 28px;
     cursor: pointer;
     z-index: 5;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-}
-
-.slider-arrow:hover {
-    transform: translateY(-50%) scale(1.06);
 }
 
 .slider-prev {
@@ -322,7 +363,7 @@ header {
     transform: scale(1.25);
 }
 
-/* CERTIFICATE */
+/* ================= CERTIFICATE ================= */
 
 .certificate-box {
     max-width: 500px;
@@ -354,46 +395,74 @@ header {
     color: #64748b;
 }
 
-/* MODAL */
+/* ================= CONTACTS ================= */
 
-.image-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0,0,0,0.94);
-    z-index: 9999;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-}
-
-.image-modal.active {
-    display: flex;
-}
-
-.image-modal img {
-    max-width: 95%;
-    max-height: 90vh;
-    object-fit: contain;
-    border-radius: 15px;
-}
-
-.close-modal {
-    position: absolute;
-    top: 15px;
-    right: 25px;
+.contacts-section {
+    background: #0f172a;
     color: white;
-    font-size: 45px;
-    cursor: pointer;
-    line-height: 1;
+    padding: 70px 20px;
 }
 
-/* CTA */
+.contacts-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.contacts-title {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.contacts-title h2 {
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.contacts-title p {
+    color: #94a3b8;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.contact-card {
+    background: #1e293b;
+    border: 1px solid #334155;
+    border-radius: 22px;
+    padding: 30px 20px;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    transition: 0.25s;
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    background: #263449;
+}
+
+.contact-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.contact-card h3 {
+    margin-bottom: 8px;
+}
+
+.contact-card p {
+    color: #cbd5e1;
+}
+
+/* ================= CTA ================= */
 
 .cta {
     max-width: 1100px;
-    margin: 20px auto 60px;
-    padding: 45px 25px;
+    margin: 55px auto;
+    padding: 50px 25px;
     border-radius: 25px;
     background: linear-gradient(135deg, #dc2626, #991b1b);
     color: white;
@@ -420,7 +489,7 @@ header {
     font-weight: 800;
 }
 
-/* FORM */
+/* ================= FORM ================= */
 
 .form {
     max-width: 600px;
@@ -464,13 +533,46 @@ header {
     cursor: wait;
 }
 
-/* FOOTER */
+/* ================= MODAL ================= */
+
+.image-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.94);
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.image-modal.active {
+    display: flex;
+}
+
+.image-modal img {
+    max-width: 95%;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 15px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+/* ================= FOOTER ================= */
 
 footer {
-    background: #0f172a;
+    background: #020617;
     color: white;
     text-align: center;
-    padding: 35px 20px;
+    padding: 40px 20px;
 }
 
 footer p {
@@ -480,15 +582,20 @@ footer p {
 
 footer strong {
     color: white;
-    font-size: 20px;
+    font-size: 21px;
 }
 
-/* MOBILE */
+/* ================= MOBILE ================= */
 
 @media (max-width: 800px) {
 
     .cards {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .why-grid,
+    .contacts-grid {
+        grid-template-columns: 1fr;
     }
 
     .work-slide img {
@@ -549,11 +656,11 @@ footer strong {
     }
 
     .work-info {
-        padding: 60px 20px 25px;
+        padding: 70px 20px 25px;
     }
 
     .work-info h3 {
-        font-size: 21px;
+        font-size: 20px;
     }
 
     .slider-arrow {
@@ -571,13 +678,16 @@ footer strong {
     }
 
     .cta {
-        margin: 10px 15px 45px;
+        margin: 45px 15px;
     }
 }
+
 </style>
 </head>
 
 <body>
+
+<!-- ================= HEADER ================= -->
 
 <header>
 
@@ -585,7 +695,9 @@ footer strong {
 
 <div class="logo">
 
-<div class="logo-icon">🛡️</div>
+<div class="logo-icon">
+🛡️
+</div>
 
 <div>
 <h1>SECURLINEUZ</h1>
@@ -598,13 +710,17 @@ footer strong {
 class="telegram-top"
 href="https://t.me/SecurLineUzBot"
 target="_blank">
+
 ✈️ Telegram
+
 </a>
 
 </div>
 
 </header>
 
+
+<!-- ================= HERO ================= -->
 
 <section class="hero">
 
@@ -620,8 +736,8 @@ target="_blank">
 
 <p>
 Проектирование, монтаж и обслуживание
-систем видеонаблюдения, пожарной сигнализации
-и комплексной безопасности.
+видеонаблюдения, пожарной сигнализации
+и комплексных систем безопасности.
 </p>
 
 <div class="hero-buttons">
@@ -629,13 +745,17 @@ target="_blank">
 <a
 class="button button-red"
 href="#request">
+
 📞 Оставить заявку
+
 </a>
 
 <a
 class="button button-blue"
 href="#works">
+
 📸 Наши работы
+
 </a>
 
 </div>
@@ -645,7 +765,7 @@ href="#works">
 </section>
 
 
-<!-- УСЛУГИ -->
+<!-- ================= SERVICES ================= -->
 
 <section class="section">
 
@@ -654,10 +774,11 @@ href="#works">
 <h2>Наши услуги</h2>
 
 <p>
-Комплексная защита вашего бизнеса и объекта
+Комплексная защита вашего бизнеса
 </p>
 
 </div>
+
 
 <div class="cards">
 
@@ -665,11 +786,13 @@ href="#works">
 
 <div class="card-icon">📹</div>
 
-<h3>Видеонаблюдение</h3>
+<h3>
+Видеонаблюдение
+</h3>
 
 <p>
-Установка современных систем видеонаблюдения
-для дома, офиса, магазина и бизнеса.
+Установка современных камер
+для магазинов, офисов и бизнеса.
 </p>
 
 </div>
@@ -679,11 +802,13 @@ href="#works">
 
 <div class="card-icon">🔥</div>
 
-<h3>Пожарная сигнализация</h3>
+<h3>
+Пожарная сигнализация
+</h3>
 
 <p>
-Проектирование и монтаж систем пожарной
-сигнализации под ключ.
+Проектирование и монтаж систем
+пожарной сигнализации.
 </p>
 
 </div>
@@ -693,11 +818,13 @@ href="#works">
 
 <div class="card-icon">🛡️</div>
 
-<h3>Аудит безопасности</h3>
+<h3>
+Аудит безопасности
+</h3>
 
 <p>
-Проверка объекта и подготовка к проверкам
-контролирующих органов.
+Проверка объекта и подготовка
+к проверкам.
 </p>
 
 </div>
@@ -707,7 +834,9 @@ href="#works">
 
 <div class="card-icon">⚙️</div>
 
-<h3>Оборудование</h3>
+<h3>
+Оборудование
+</h3>
 
 <p>
 Поставка и установка оборудования
@@ -721,7 +850,88 @@ href="#works">
 </section>
 
 
-<!-- НАШИ РАБОТЫ -->
+<!-- ================= WHY US ================= -->
+
+<section class="why-section">
+
+<div class="why-container">
+
+<div class="section-title">
+
+<h2>
+Почему выбирают SecurLineUz
+</h2>
+
+<p>
+Мы отвечаем за результат
+</p>
+
+</div>
+
+
+<div class="why-grid">
+
+<div class="why-card">
+
+<div class="why-icon">
+👨‍🔧
+</div>
+
+<h3>
+Опытные специалисты
+</h3>
+
+<p>
+Наши специалисты выполняют
+монтаж аккуратно и профессионально.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+⭐
+</div>
+
+<h3>
+Качественное оборудование
+</h3>
+
+<p>
+Используем современные решения
+для надёжной работы системы.
+</p>
+
+</div>
+
+
+<div class="why-card">
+
+<div class="why-icon">
+🤝
+</div>
+
+<h3>
+Ответственный подход
+</h3>
+
+<p>
+От консультации до установки
+мы сопровождаем клиента.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WORKS ================= -->
 
 <section
 class="works-section"
@@ -729,11 +939,13 @@ id="works">
 
 <div class="section-title">
 
-<h2>📸 Наши работы</h2>
+<h2>
+📸 Наши работы
+</h2>
 
 <p>
-Реальные проекты SecurLineUz — качество,
-которое можно увидеть.
+Реальные проекты SecurLineUz —
+качество, которое можно увидеть.
 </p>
 
 </div>
@@ -745,6 +957,8 @@ id="works">
 class="works-track"
 id="worksTrack">
 
+
+<!-- 1 -->
 
 <div class="work-slide">
 
@@ -769,6 +983,8 @@ onclick="openImage(this.src)">
 </div>
 
 
+<!-- 2 -->
+
 <div class="work-slide">
 
 <img
@@ -792,11 +1008,13 @@ onclick="openImage(this.src)">
 </div>
 
 
+<!-- 3 -->
+
 <div class="work-slide">
 
 <img
 src="diploma%20(2).jpeg"
-alt="Видеонаблюдение в строительном магазине"
+alt="Строительный магазин"
 onclick="openImage(this.src)">
 
 <div class="work-info">
@@ -815,22 +1033,24 @@ onclick="openImage(this.src)">
 </div>
 
 
+<!-- 4 -->
+
 <div class="work-slide">
 
 <img
 src="diploma%20(3).jpeg"
-alt="Безопасность подъезда"
+alt="Подъезд многоэтажного дома"
 onclick="openImage(this.src)">
 
 <div class="work-info">
 
 <h3>
-🏢 Безопасность подъезда многоэтажного дома
+🏢 Безопасность подъезда
 </h3>
 
 <p>
-Установка системы видеонаблюдения
-для контроля входной зоны.
+Система видеонаблюдения
+для входной зоны многоэтажного дома.
 </p>
 
 </div>
@@ -838,11 +1058,13 @@ onclick="openImage(this.src)">
 </div>
 
 
+<!-- 5 -->
+
 <div class="work-slide">
 
 <img
 src="diploma%20(4).jpeg"
-alt="Видеонаблюдение для офиса"
+alt="Офис"
 onclick="openImage(this.src)">
 
 <div class="work-info">
@@ -866,17 +1088,19 @@ onclick="openImage(this.src)">
 
 <button
 class="slider-arrow slider-prev"
-onclick="previousSlide()"
-aria-label="Предыдущая фотография">
+onclick="previousSlide()">
+
 ‹
+
 </button>
 
 
 <button
 class="slider-arrow slider-next"
-onclick="nextSlide()"
-aria-label="Следующая фотография">
+onclick="nextSlide()">
+
 ›
+
 </button>
 
 
@@ -890,13 +1114,15 @@ id="sliderDots">
 </section>
 
 
-<!-- СЕРТИФИКАТ -->
+<!-- ================= CERTIFICATE ================= -->
 
 <section class="section">
 
 <div class="section-title">
 
-<h2>🏆 Наш сертификат</h2>
+<h2>
+🏆 Наш сертификат
+</h2>
 
 <p>
 Подтверждение профессионализма SecurLineUz
@@ -915,10 +1141,13 @@ alt="Сертификат SecurLineUz">
 
 <div class="certificate-text">
 
-<h3>🏆 Сертификат</h3>
+<h3>
+🏆 Сертификат
+</h3>
 
 <p>
-Нажмите на изображение, чтобы посмотреть крупнее
+Нажмите на изображение,
+чтобы посмотреть крупнее
 </p>
 
 </div>
@@ -928,28 +1157,7 @@ alt="Сертификат SecurLineUz">
 </section>
 
 
-<!-- MODAL -->
-
-<div
-class="image-modal"
-id="imageModal"
-onclick="closeImage()">
-
-<span
-class="close-modal"
-onclick="closeImage(event)">
-×
-</span>
-
-<img
-id="modalImage"
-src=""
-alt="Просмотр изображения">
-
-</div>
-
-
-<!-- CTA -->
+<!-- ================= CTA ================= -->
 
 <div class="cta">
 
@@ -958,21 +1166,111 @@ alt="Просмотр изображения">
 </h2>
 
 <p>
-Оставьте заявку — специалисты SecurLineUz
-свяжутся с вами.
+Оставьте заявку — специалисты
+SecurLineUz свяжутся с вами.
 </p>
 
 <a
 class="cta-button"
 href="https://t.me/SecurLineUzBot"
 target="_blank">
+
 ✈️ Написать в Telegram
+
 </a>
 
 </div>
 
 
-<!-- ФОРМА -->
+<!-- ================= CONTACTS ================= -->
+
+<section class="contacts-section">
+
+<div class="contacts-container">
+
+<div class="contacts-title">
+
+<h2>
+📲 Свяжитесь с нами
+</h2>
+
+<p>
+Выберите удобный способ связи
+</p>
+
+</div>
+
+
+<div class="contacts-grid">
+
+
+<a
+class="contact-card"
+href="tel:+998950214334">
+
+<div class="contact-icon">
+📞
+</div>
+
+<h3>
+Позвонить
+</h3>
+
+<p>
++998 95 021 43 34
+</p>
+
+</a>
+
+
+<a
+class="contact-card"
+href="https://t.me/SecurLineUzBot"
+target="_blank">
+
+<div class="contact-icon">
+✈️
+</div>
+
+<h3>
+Telegram
+</h3>
+
+<p>
+@SecurLineUzBot
+</p>
+
+</a>
+
+
+<a
+class="contact-card"
+href="https://www.instagram.com/securlineuz/"
+target="_blank">
+
+<div class="contact-icon">
+📸
+</div>
+
+<h3>
+Instagram
+</h3>
+
+<p>
+@securlineuz
+</p>
+
+</a>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FORM ================= -->
 
 <section
 class="section"
@@ -980,10 +1278,13 @@ id="request">
 
 <div class="section-title">
 
-<h2>📞 Оставить заявку</h2>
+<h2>
+📞 Оставить заявку
+</h2>
 
 <p>
-Расскажите, какая система безопасности вам необходима
+Расскажите, какая система безопасности
+вам необходима
 </p>
 
 </div>
@@ -1013,13 +1314,40 @@ required></textarea>
 <button
 type="submit"
 id="submitButton">
+
 Отправить заявку
+
 </button>
 
 </form>
 
 </section>
 
+
+<!-- ================= IMAGE MODAL ================= -->
+
+<div
+class="image-modal"
+id="imageModal"
+onclick="closeImage()">
+
+<span
+class="close-modal"
+onclick="closeImage(event)">
+
+×
+
+</span>
+
+<img
+id="modalImage"
+src=""
+alt="Просмотр изображения">
+
+</div>
+
+
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
@@ -1028,11 +1356,20 @@ id="submitButton">
 </p>
 
 <p>
-Безопасность начинается с правильного решения.
+Безопасность начинается
+с правильного решения.
 </p>
 
 <p>
-📲 Telegram: @SecurLineUzBot
+📞 +998 95 021 43 34
+</p>
+
+<p>
+📸 Instagram: @securlineuz
+</p>
+
+<p>
+✈️ Telegram: @SecurLineUzBot
 </p>
 
 <p>
@@ -1044,7 +1381,7 @@ id="submitButton">
 
 <script>
 
-/* ЗАЯВКА */
+/* ================= FORM ================= */
 
 const GOOGLE_SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbyj4FruRd3JzYOutyoV88OLIPFwW4oaOiZyvWauOoaRSYeMsRN9q9RGmWC3GyxFlFC2/exec";
@@ -1054,6 +1391,7 @@ document.getElementById("requestForm");
 
 const submitButton =
 document.getElementById("submitButton");
+
 
 form.addEventListener(
 "submit",
@@ -1070,6 +1408,7 @@ form.querySelector('[name="phone"]').value.trim();
 const message =
 form.querySelector('[name="message"]').value.trim();
 
+
 if (!name || !phone || !message) {
 
 alert("Пожалуйста, заполните все поля.");
@@ -1078,10 +1417,12 @@ return;
 
 }
 
+
 submitButton.disabled = true;
 
 submitButton.textContent =
 "Отправляем...";
+
 
 try {
 
@@ -1102,11 +1443,13 @@ message: message
 }
 );
 
+
 alert(
 "✅ Заявка отправлена! Мы скоро свяжемся с вами."
 );
 
 form.reset();
+
 
 } catch (error) {
 
@@ -1128,7 +1471,7 @@ submitButton.textContent =
 });
 
 
-/* КАРУСЕЛЬ */
+/* ================= SLIDER ================= */
 
 const track =
 document.getElementById("worksTrack");
@@ -1144,17 +1487,14 @@ let currentSlide = 0;
 let autoSlide;
 
 
-slides.forEach(function(_, index) {
+slides.forEach(
+function(_, index) {
 
 const dot =
 document.createElement("button");
 
-dot.className = "slider-dot";
-
-dot.setAttribute(
-"aria-label",
-"Открыть фотографию " + (index + 1)
-);
+dot.className =
+"slider-dot";
 
 dot.addEventListener(
 "click",
@@ -1169,7 +1509,8 @@ startAutoSlide();
 
 dotsContainer.appendChild(dot);
 
-});
+}
+);
 
 
 const dots =
@@ -1182,6 +1523,7 @@ track.style.transform =
 "translateX(-" +
 (currentSlide * 100) +
 "%)";
+
 
 dots.forEach(
 function(dot, index) {
@@ -1210,162 +1552,4 @@ updateSlider();
 
 function nextSlide() {
 
-goToSlide(currentSlide + 1);
-
-}
-
-
-function previousSlide() {
-
-goToSlide(currentSlide - 1);
-
-}
-
-
-function startAutoSlide() {
-
-clearInterval(autoSlide);
-
-autoSlide =
-setInterval(
-nextSlide,
-4500
-);
-
-}
-
-
-updateSlider();
-
-startAutoSlide();
-
-
-/* ОСТАНОВКА АВТОПРОКРУТКИ */
-
-const slider =
-document.querySelector(".works-slider");
-
-slider.addEventListener(
-"mouseenter",
-function() {
-clearInterval(autoSlide);
-}
-);
-
-slider.addEventListener(
-"mouseleave",
-function() {
-startAutoSlide();
-}
-);
-
-
-/* СВАЙП НА ТЕЛЕФОНЕ */
-
-let touchStartX = 0;
-let touchEndX = 0;
-
-slider.addEventListener(
-"touchstart",
-function(event) {
-
-touchStartX =
-event.changedTouches[0].screenX;
-
-clearInterval(autoSlide);
-
-},
-{passive: true}
-);
-
-
-slider.addEventListener(
-"touchend",
-function(event) {
-
-touchEndX =
-event.changedTouches[0].screenX;
-
-const difference =
-touchStartX - touchEndX;
-
-if (Math.abs(difference) > 50) {
-
-if (difference > 0) {
-
-nextSlide();
-
-} else {
-
-previousSlide();
-
-}
-
-}
-
-startAutoSlide();
-
-},
-{passive: true}
-);
-
-
-/* ПРОСМОТР ФОТО */
-
-function openImage(src) {
-
-const modal =
-document.getElementById("imageModal");
-
-const modalImage =
-document.getElementById("modalImage");
-
-modalImage.src = src;
-
-modal.classList.add("active");
-
-document.body.style.overflow =
-"hidden";
-
-}
-
-
-function closeImage(event) {
-
-if (event) {
-event.stopPropagation();
-}
-
-const modal =
-document.getElementById("imageModal");
-
-modal.classList.remove("active");
-
-document.body.style.overflow = "";
-
-document.getElementById(
-"modalImage"
-).src = "";
-
-}
-
-
-/* ESC */
-
-document.addEventListener(
-"keydown",
-function(event) {
-
-if (event.key === "Escape") {
-
-closeImage();
-
-}
-
-}
-);
-
-</script>
-
-</body>
-    </html>
+goToSli
