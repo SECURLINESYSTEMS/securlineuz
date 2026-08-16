@@ -231,17 +231,13 @@ header {
 
 .object:hover {
     transform: translateY(-7px);
-    box-shadow: 0 12px 35px rgba(15,23,42,0.14);
 }
 
 .object-photo {
     width: 100%;
     height: 240px;
     overflow: hidden;
-    background: linear-gradient(135deg, #1e293b, #334155);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: #1e293b;
 }
 
 .object-photo img {
@@ -249,24 +245,12 @@ header {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: 0.4s;
     cursor: pointer;
+    transition: 0.4s;
 }
 
-.object:hover .object-photo img {
+.object-photo img:hover {
     transform: scale(1.05);
-}
-
-.photo-placeholder {
-    color: white;
-    text-align: center;
-    font-size: 55px;
-}
-
-.photo-placeholder p {
-    font-size: 14px;
-    color: #cbd5e1;
-    margin-top: 8px;
 }
 
 .object-text {
@@ -294,13 +278,46 @@ header {
     font-weight: 700;
 }
 
-/* PHOTO MODAL */
+/* CERTIFICATE */
+
+.certificate-box {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 12px;
+    border-radius: 22px;
+    box-shadow: 0 8px 35px rgba(15,23,42,0.12);
+    cursor: pointer;
+}
+
+.certificate-box img {
+    width: 100%;
+    display: block;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.certificate-text {
+    text-align: center;
+    padding: 18px 10px 10px;
+}
+
+.certificate-text h3 {
+    font-size: 21px;
+    margin-bottom: 6px;
+}
+
+.certificate-text p {
+    color: #64748b;
+}
+
+/* MODAL */
 
 .image-modal {
     display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0,0,0,0.92);
+    background: rgba(0,0,0,0.94);
     z-index: 9999;
     align-items: center;
     justify-content: center;
@@ -472,6 +489,10 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
+    .objects {
+        grid-template-columns: 1fr;
+    }
+
     .section {
         padding: 45px 15px;
     }
@@ -495,155 +516,168 @@ footer strong {
 
 <header>
 
-    <div class="header-inner">
+<div class="header-inner">
 
-        <div class="logo">
+<div class="logo">
 
-            <div class="logo-icon">
-                🛡️
-            </div>
+<div class="logo-icon">
+🛡️
+</div>
 
-            <div>
-                <h1>SECURLINEUZ</h1>
-                <p>Системы безопасности</p>
-            </div>
+<div>
+<h1>SECURLINEUZ</h1>
+<p>Системы безопасности</p>
+</div>
 
-        </div>
+</div>
 
-        <a
-            class="telegram-top"
-            href="https://t.me/SecurLineUzBot"
-            target="_blank">
-            ✈️ Telegram
-        </a>
+<a
+class="telegram-top"
+href="https://t.me/SecurLineUzBot"
+target="_blank">
 
-    </div>
+✈️ Telegram
+
+</a>
+
+</div>
 
 </header>
 
 
 <section class="hero">
 
-    <div class="hero-content">
+<div class="hero-content">
 
-        <div class="badge">
-            🔥 Профессиональная безопасность
-        </div>
+<div class="badge">
+🛡️ Профессиональная безопасность
+</div>
 
-        <h2>
-            Защитим ваш <span>объект</span>
-        </h2>
+<h2>
+Защитим ваш <span>объект</span>
+</h2>
 
-        <p>
-            Проектирование, монтаж и обслуживание пожарной сигнализации,
-            видеонаблюдения и комплексных систем безопасности.
-        </p>
+<p>
+Проектирование, монтаж и обслуживание
+систем видеонаблюдения, пожарной сигнализации
+и комплексной безопасности.
+</p>
 
-        <div class="hero-buttons">
+<div class="hero-buttons">
 
-            <a
-                class="button button-red"
-                href="#request">
-                📞 Оставить заявку
-            </a>
+<a
+class="button button-red"
+href="#request">
 
-            <a
-                class="button button-blue"
-                href="https://t.me/SecurLineUzBot"
-                target="_blank">
-                ✈️ Написать в Telegram
-            </a>
+📞 Оставить заявку
 
-        </div>
+</a>
 
-    </div>
+<a
+class="button button-blue"
+href="https://t.me/SecurLineUzBot"
+target="_blank">
+
+✈️ Написать в Telegram
+
+</a>
+
+</div>
+
+</div>
 
 </section>
 
 
+<!-- УСЛУГИ -->
+
 <section class="section">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>Наши услуги</h2>
+<h2>Наши услуги</h2>
 
-        <p>
-            Комплексная защита вашего бизнеса и объекта
-        </p>
+<p>
+Комплексная защита вашего бизнеса и объекта
+</p>
 
-    </div>
-
-
-    <div class="cards">
-
-        <div class="card">
-
-            <div class="card-icon">
-                🔥
-            </div>
-
-            <h3>
-                Пожарная сигнализация
-            </h3>
-
-            <p>
-                Проектирование и монтаж систем пожарной сигнализации под ключ.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="cards">
 
-            <div class="card-icon">
-                📹
-            </div>
+<div class="card">
 
-            <h3>
-                Видеонаблюдение
-            </h3>
+<div class="card-icon">
+📹
+</div>
 
-            <p>
-                Установка современных систем видеонаблюдения для бизнеса.
-            </p>
+<h3>
+Видеонаблюдение
+</h3>
 
-        </div>
+<p>
+Установка современных систем видеонаблюдения
+для дома, офиса, магазина и бизнеса.
+</p>
 
-
-        <div class="card">
-
-            <div class="card-icon">
-                🛡️
-            </div>
-
-            <h3>
-                Аудит безопасности
-            </h3>
-
-            <p>
-                Проверка объекта и подготовка к проверкам МЧС.
-            </p>
-
-        </div>
+</div>
 
 
-        <div class="card">
+<div class="card">
 
-            <div class="card-icon">
-                ⚙️
-            </div>
+<div class="card-icon">
+🔥
+</div>
 
-            <h3>
-                Оборудование
-            </h3>
+<h3>
+Пожарная сигнализация
+</h3>
 
-            <p>
-                Поставка сертифицированного оборудования для систем безопасности.
-            </p>
+<p>
+Проектирование и монтаж систем пожарной
+сигнализации под ключ.
+</p>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="card">
+
+<div class="card-icon">
+🛡️
+</div>
+
+<h3>
+Аудит безопасности
+</h3>
+
+<p>
+Проверка объекта и подготовка к проверкам
+контролирующих органов.
+</p>
+
+</div>
+
+
+<div class="card">
+
+<div class="card-icon">
+⚙️
+</div>
+
+<h3>
+Оборудование
+</h3>
+
+<p>
+Поставка и установка оборудования
+для систем безопасности.
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -652,111 +686,215 @@ footer strong {
 
 <section class="section">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>
-            📸 Выполненные объекты
-        </h2>
+<h2>
+📸 Выполненные объекты
+</h2>
 
-        <p>
-            Наш опыт — ваша уверенность в результате
-        </p>
+<p>
+Реальные работы специалистов SecurLineUz
+</p>
 
-    </div>
-
-
-    <div class="objects">
-
-        <div class="object">
-
-            <div class="object-photo">
-
-                <div class="photo-placeholder">
-                    🔥
-                    <p>Фото объекта</p>
-                </div>
-
-            </div>
-
-            <div class="object-text">
-
-                <h3>
-                    Объект №1
-                </h3>
-
-                <p>
-                    Монтаж системы пожарной сигнализации.
-                </p>
-
-                <span class="object-tag">
-                    🔥 Пожарная безопасность
-                </span>
-
-            </div>
-
-        </div>
+</div>
 
 
-        <div class="object">
-
-            <div class="object-photo">
-
-                <div class="photo-placeholder">
-                    📹
-                    <p>Фото объекта</p>
-                </div>
-
-            </div>
-
-            <div class="object-text">
-
-                <h3>
-                    Объект №2
-                </h3>
-
-                <p>
-                    Установка современной системы видеонаблюдения.
-                </p>
-
-                <span class="object-tag">
-                    📹 Видеонаблюдение
-                </span>
-
-            </div>
-
-        </div>
+<div class="objects">
 
 
-        <div class="object">
+<div class="object">
 
-            <div class="object-photo">
+<div class="object-photo">
 
-                <div class="photo-placeholder">
-                    🛡️
-                    <p>Фото объекта</p>
-                </div>
+<img
+src="diploma.jpeg"
+alt="Установка видеонаблюдения"
+onclick="openImage(this.src)">
 
-            </div>
+</div>
 
-            <div class="object-text">
+<div class="object-text">
 
-                <h3>
-                    Объект №3
-                </h3>
+<h3>
+Объект №1
+</h3>
 
-                <p>
-                    Комплексная система безопасности объекта.
-                </p>
+<p>
+Монтаж системы видеонаблюдения.
+</p>
 
-                <span class="object-tag">
-                    🛡️ Комплексная защита
-                </span>
+<span class="object-tag">
+📹 Видеонаблюдение
+</span>
 
-            </div>
+</div>
 
-        </div>
+</div>
 
-    </div>
+
+<div class="object">
+
+<div class="object-photo">
+
+<img
+src="diploma%20(1).jpeg"
+alt="Установка камер"
+onclick="openImage(this.src)">
+
+</div>
+
+<div class="object-text">
+
+<h3>
+Объект №2
+</h3>
+
+<p>
+Установка камер видеонаблюдения.
+</p>
+
+<span class="object-tag">
+📹 Камеры
+</span>
+
+</div>
+
+</div>
+
+
+<div class="object">
+
+<div class="object-photo">
+
+<img
+src="diploma%20(2).jpeg"
+alt="Монтаж камер"
+onclick="openImage(this.src)">
+
+</div>
+
+<div class="object-text">
+
+<h3>
+Объект №3
+</h3>
+
+<p>
+Монтаж оборудования видеонаблюдения.
+</p>
+
+<span class="object-tag">
+📹 Монтаж
+</span>
+
+</div>
+
+</div>
+
+
+<div class="object">
+
+<div class="object-photo">
+
+<img
+src="diploma%20(3).jpeg"
+alt="Работа специалистов"
+onclick="openImage(this.src)">
+
+</div>
+
+<div class="object-text">
+
+<h3>
+Объект №4
+</h3>
+
+<p>
+Работа специалистов SecurLineUz.
+</p>
+
+<span class="object-tag">
+👨‍🔧 Наша команда
+</span>
+
+</div>
+
+</div>
+
+
+<div class="object">
+
+<div class="object-photo">
+
+<img
+src="diploma%20(4).jpeg"
+alt="Система безопасности"
+onclick="openImage(this.src)">
+
+</div>
+
+<div class="object-text">
+
+<h3>
+Объект №5
+</h3>
+
+<p>
+Монтаж системы безопасности объекта.
+</p>
+
+<span class="object-tag">
+🛡️ Безопасность
+</span>
+
+</div>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- СЕРТИФИКАТ -->
+
+<section class="section">
+
+<div class="section-title">
+
+<h2>
+🏆 Наш сертификат
+</h2>
+
+<p>
+Подтверждение профессионализма SecurLineUz
+</p>
+
+</div>
+
+
+<div
+class="certificate-box"
+onclick="openImage('IMG_20260816_232228.jpg')">
+
+<img
+src="IMG_20260816_232228.jpg"
+alt="Сертификат SecurLineUz">
+
+<div class="certificate-text">
+
+<h3>
+🏆 Сертификат
+</h3>
+
+<p>
+Нажмите на изображение, чтобы посмотреть крупнее
+</p>
+
+</div>
+
+</div>
 
 </section>
 
@@ -764,104 +902,119 @@ footer strong {
 <!-- ПРОСМОТР ФОТО -->
 
 <div
-    class="image-modal"
-    id="imageModal"
-    onclick="closeImage()">
+class="image-modal"
+id="imageModal"
+onclick="closeImage()">
 
-    <span
-        class="close-modal"
-        onclick="closeImage()">
-        ×
-    </span>
+<span
+class="close-modal"
+onclick="closeImage(event)">
+×
+</span>
 
-    <img
-        id="modalImage"
-        src=""
-        alt="Фото объекта">
+<img
+id="modalImage"
+src=""
+alt="Просмотр изображения">
 
 </div>
 
+
+<!-- CTA -->
 
 <div class="cta">
 
-    <h2>
-        Нужна защита объекта?
-    </h2>
+<h2>
+Нужна защита объекта?
+</h2>
 
-    <p>
-        Оставьте заявку — специалисты SecurLineUz свяжутся с вами.
-    </p>
+<p>
+Оставьте заявку — специалисты SecurLineUz
+свяжутся с вами.
+</p>
 
-    <a
-        class="cta-button"
-        href="https://t.me/SecurLineUzBot"
-        target="_blank">
-        ✈️ Написать в Telegram
-    </a>
+<a
+class="cta-button"
+href="https://t.me/SecurLineUzBot"
+target="_blank">
+
+✈️ Написать в Telegram
+
+</a>
 
 </div>
 
 
+<!-- ФОРМА -->
+
 <section
-    class="section"
-    id="request">
+class="section"
+id="request">
 
-    <div class="section-title">
+<div class="section-title">
 
-        <h2>
-            📞 Оставить заявку
-        </h2>
+<h2>
+📞 Оставить заявку
+</h2>
 
-        <p>
-            Расскажите, какая система безопасности вам необходима
-        </p>
+<p>
+Расскажите, какая система безопасности вам необходима
+</p>
 
-    </div>
+</div>
 
 
-    <form class="form" id="requestForm">
+<form
+class="form"
+id="requestForm">
 
-        <input
-            type="text"
-            name="name"
-            placeholder="Ваше имя"
-            required>
+<input
+type="text"
+name="name"
+placeholder="Ваше имя"
+required>
 
-        <input
-            type="tel"
-            name="phone"
-            placeholder="Номер телефона"
-            required>
+<input
+type="tel"
+name="phone"
+placeholder="Номер телефона"
+required>
 
-        <textarea
-            name="message"
-            placeholder="Что вам необходимо?"
-            required></textarea>
+<textarea
+name="message"
+placeholder="Что вам необходимо?"
+required></textarea>
 
-        <button
-            type="submit"
-            id="submitButton">
-            Отправить заявку
-        </button>
+<button
+type="submit"
+id="submitButton">
 
-    </form>
+Отправить заявку
+
+</button>
+
+</form>
 
 </section>
 
 
 <footer>
 
-    <p>
-        <strong>SecurLineUz</strong>
-    </p>
+<p>
+<strong>SecurLineUz</strong>
+</p>
 
-    <p>
-        Безопасность начинается с правильного решения.
-    </p>
+<p>
+Безопасность начинается с правильного решения.
+</p>
 
-    <p>
-        © 2026 SecurLineUz
-    </p>
+<p>
+📲 Telegram: @SecurLineUzBot
+</p>
+
+<p>
+© 2026 SecurLineUz
+</p>
 
 </footer>
 
@@ -871,82 +1024,181 @@ footer strong {
 const GOOGLE_SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbyj4FruRd3JzYOutyoV88OLIPFwW4oaOiZyvWauOoaRSYeMsRN9q9RGmWC3GyxFlFC2/exec";
 
-const form = document.getElementById("requestForm");
-const submitButton = document.getElementById("submitButton");
 
-form.addEventListener("submit", async function(event) {
+const form =
+document.getElementById("requestForm");
 
-    event.preventDefault();
-
-    const name = form.querySelector('[name="name"]').value.trim();
-    const phone = form.querySelector('[name="phone"]').value.trim();
-    const message = form.querySelector('[name="message"]').value.trim();
-
-    if (!name || !phone || !message) {
-        alert("Пожалуйста, заполните все поля.");
-        return;
-    }
-
-    submitButton.disabled = true;
-    submitButton.textContent = "Отправляем...";
-
-    try {
-
-        await fetch(GOOGLE_SCRIPT_URL, {
-            method: "POST",
-            mode: "no-cors",
-            headers: {
-                "Content-Type": "text/plain;charset=utf-8"
-            },
-            body: JSON.stringify({
-                name: name,
-                phone: phone,
-                message: message
-            })
-        });
-
-        alert("✅ Заявка отправлена! Мы скоро свяжемся с вами.");
-
-        form.reset();
-
-    } catch (error) {
-
-        console.error(error);
-
-        alert("❌ Не удалось отправить заявку. Попробуйте ещё раз.");
-
-    } finally {
-
-        submitButton.disabled = false;
-        submitButton.textContent = "Отправить заявку";
-
-    }
-
-});
+const submitButton =
+document.getElementById("submitButton");
 
 
-/* ПРОСМОТР ФОТО */
+form.addEventListener(
+"submit",
+async function(event) {
+
+event.preventDefault();
+
+
+const name =
+form.querySelector(
+'[name="name"]'
+).value.trim();
+
+
+const phone =
+form.querySelector(
+'[name="phone"]'
+).value.trim();
+
+
+const message =
+form.querySelector(
+'[name="message"]'
+).value.trim();
+
+
+if (!name || !phone || !message) {
+
+alert(
+"Пожалуйста, заполните все поля."
+);
+
+return;
+
+}
+
+
+submitButton.disabled = true;
+
+submitButton.textContent =
+"Отправляем...";
+
+
+try {
+
+await fetch(
+GOOGLE_SCRIPT_URL,
+{
+
+method: "POST",
+
+mode: "no-cors",
+
+headers: {
+
+"Content-Type":
+"text/plain;charset=utf-8"
+
+},
+
+body: JSON.stringify({
+
+name: name,
+
+phone: phone,
+
+message: message
+
+})
+
+}
+);
+
+
+alert(
+"✅ Заявка отправлена! Мы скоро свяжемся с вами."
+);
+
+
+form.reset();
+
+
+} catch (error) {
+
+console.error(error);
+
+
+alert(
+"❌ Не удалось отправить заявку. Попробуйте ещё раз."
+);
+
+
+} finally {
+
+submitButton.disabled = false;
+
+submitButton.textContent =
+"Отправить заявку";
+
+}
+
+}
+);
+
+
+/* ПРОСМОТР ИЗОБРАЖЕНИЙ */
 
 function openImage(src) {
 
-    const modal = document.getElementById("imageModal");
-    const modalImage = document.getElementById("modalImage");
+const modal =
+document.getElementById("imageModal");
 
-    modalImage.src = src;
-    modal.classList.add("active");
+const modalImage =
+document.getElementById("modalImage");
+
+
+modalImage.src = src;
+
+modal.classList.add("active");
+
+document.body.style.overflow =
+"hidden";
 
 }
 
 
-function closeImage() {
+function closeImage(event) {
 
-    const modal = document.getElementById("imageModal");
+if (event) {
 
-    modal.classList.remove("active");
+event.stopPropagation();
 
 }
+
+
+const modal =
+document.getElementById("imageModal");
+
+
+modal.classList.remove("active");
+
+document.body.style.overflow =
+"";
+
+
+document.getElementById(
+"modalImage"
+).src = "";
+
+}
+
+
+/* ESC */
+
+document.addEventListener(
+"keydown",
+function(event) {
+
+if (event.key === "Escape") {
+
+closeImage();
+
+}
+
+}
+);
 
 </script>
 
 </body>
-</html>
+    </html>
