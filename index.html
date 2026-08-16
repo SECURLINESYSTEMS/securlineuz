@@ -212,70 +212,114 @@ header {
     line-height: 1.6;
 }
 
-/* OBJECTS */
+/* OUR WORKS */
 
-.objects {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 22px;
+.works-section {
+    max-width: 1200px;
+    margin: auto;
+    padding: 60px 15px;
 }
 
-.object {
-    background: white;
-    border-radius: 22px;
+.works-slider {
+    position: relative;
     overflow: hidden;
-    box-shadow: 0 6px 28px rgba(15,23,42,0.09);
-    border: 1px solid #e5e7eb;
-    transition: 0.3s;
+    border-radius: 26px;
+    background: #0f172a;
+    box-shadow: 0 12px 40px rgba(15,23,42,0.18);
 }
 
-.object:hover {
-    transform: translateY(-7px);
+.works-track {
+    display: flex;
+    transition: transform 0.6s ease;
+    touch-action: pan-y;
 }
 
-.object-photo {
+.work-slide {
+    min-width: 100%;
+    position: relative;
+}
+
+.work-slide img {
     width: 100%;
-    height: 240px;
-    overflow: hidden;
-    background: #1e293b;
-}
-
-.object-photo img {
-    width: 100%;
-    height: 100%;
+    height: 560px;
     object-fit: cover;
     display: block;
     cursor: pointer;
-    transition: 0.4s;
 }
 
-.object-photo img:hover {
-    transform: scale(1.05);
+.work-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 55px 30px 28px;
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.85)
+    );
 }
 
-.object-text {
-    padding: 20px;
+.work-info h3 {
+    font-size: 26px;
+    margin-bottom: 6px;
 }
 
-.object-text h3 {
-    margin-bottom: 8px;
-    font-size: 20px;
+.work-info p {
+    color: #e2e8f0;
+    font-size: 15px;
 }
 
-.object-text p {
-    color: #64748b;
-    line-height: 1.5;
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.9);
+    color: #111827;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 5;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.2);
 }
 
-.object-tag {
-    display: inline-block;
-    margin-top: 14px;
-    padding: 7px 11px;
-    border-radius: 20px;
-    background: #fee2e2;
-    color: #b91c1c;
-    font-size: 12px;
-    font-weight: 700;
+.slider-arrow:hover {
+    transform: translateY(-50%) scale(1.06);
+}
+
+.slider-prev {
+    left: 18px;
+}
+
+.slider-next {
+    right: 18px;
+}
+
+.slider-dots {
+    position: absolute;
+    bottom: 18px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 6;
+}
+
+.slider-dot {
+    width: 9px;
+    height: 9px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.55);
+    cursor: pointer;
+}
+
+.slider-dot.active {
+    background: white;
+    transform: scale(1.25);
 }
 
 /* CERTIFICATE */
@@ -294,7 +338,6 @@ header {
     width: 100%;
     display: block;
     border-radius: 15px;
-    cursor: pointer;
 }
 
 .certificate-text {
@@ -448,8 +491,8 @@ footer strong {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .objects {
-        grid-template-columns: 1fr;
+    .work-slide img {
+        height: 470px;
     }
 }
 
@@ -489,10 +532,6 @@ footer strong {
         grid-template-columns: 1fr;
     }
 
-    .objects {
-        grid-template-columns: 1fr;
-    }
-
     .section {
         padding: 45px 15px;
     }
@@ -501,12 +540,38 @@ footer strong {
         font-size: 28px;
     }
 
-    .cta {
-        margin: 10px 15px 45px;
+    .works-section {
+        padding: 45px 10px;
     }
 
-    .object-photo {
-        height: 230px;
+    .work-slide img {
+        height: 430px;
+    }
+
+    .work-info {
+        padding: 60px 20px 25px;
+    }
+
+    .work-info h3 {
+        font-size: 21px;
+    }
+
+    .slider-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 23px;
+    }
+
+    .slider-prev {
+        left: 10px;
+    }
+
+    .slider-next {
+        right: 10px;
+    }
+
+    .cta {
+        margin: 10px 15px 45px;
     }
 }
 </style>
@@ -520,9 +585,7 @@ footer strong {
 
 <div class="logo">
 
-<div class="logo-icon">
-🛡️
-</div>
+<div class="logo-icon">🛡️</div>
 
 <div>
 <h1>SECURLINEUZ</h1>
@@ -535,9 +598,7 @@ footer strong {
 class="telegram-top"
 href="https://t.me/SecurLineUzBot"
 target="_blank">
-
 ✈️ Telegram
-
 </a>
 
 </div>
@@ -568,18 +629,13 @@ target="_blank">
 <a
 class="button button-red"
 href="#request">
-
 📞 Оставить заявку
-
 </a>
 
 <a
 class="button button-blue"
-href="https://t.me/SecurLineUzBot"
-target="_blank">
-
-✈️ Написать в Telegram
-
+href="#works">
+📸 Наши работы
 </a>
 
 </div>
@@ -603,18 +659,13 @@ target="_blank">
 
 </div>
 
-
 <div class="cards">
 
 <div class="card">
 
-<div class="card-icon">
-📹
-</div>
+<div class="card-icon">📹</div>
 
-<h3>
-Видеонаблюдение
-</h3>
+<h3>Видеонаблюдение</h3>
 
 <p>
 Установка современных систем видеонаблюдения
@@ -626,13 +677,9 @@ target="_blank">
 
 <div class="card">
 
-<div class="card-icon">
-🔥
-</div>
+<div class="card-icon">🔥</div>
 
-<h3>
-Пожарная сигнализация
-</h3>
+<h3>Пожарная сигнализация</h3>
 
 <p>
 Проектирование и монтаж систем пожарной
@@ -644,13 +691,9 @@ target="_blank">
 
 <div class="card">
 
-<div class="card-icon">
-🛡️
-</div>
+<div class="card-icon">🛡️</div>
 
-<h3>
-Аудит безопасности
-</h3>
+<h3>Аудит безопасности</h3>
 
 <p>
 Проверка объекта и подготовка к проверкам
@@ -662,13 +705,9 @@ target="_blank">
 
 <div class="card">
 
-<div class="card-icon">
-⚙️
-</div>
+<div class="card-icon">⚙️</div>
 
-<h3>
-Оборудование
-</h3>
+<h3>Оборудование</h3>
 
 <p>
 Поставка и установка оборудования
@@ -682,175 +721,169 @@ target="_blank">
 </section>
 
 
-<!-- ВЫПОЛНЕННЫЕ ОБЪЕКТЫ -->
+<!-- НАШИ РАБОТЫ -->
 
-<section class="section">
+<section
+class="works-section"
+id="works">
 
 <div class="section-title">
 
-<h2>
-📸 Выполненные объекты
-</h2>
+<h2>📸 Наши работы</h2>
 
 <p>
-Реальные работы специалистов SecurLineUz
+Реальные проекты SecurLineUz — качество,
+которое можно увидеть.
 </p>
 
 </div>
 
 
-<div class="objects">
+<div class="works-slider">
+
+<div
+class="works-track"
+id="worksTrack">
 
 
-<div class="object">
-
-<div class="object-photo">
+<div class="work-slide">
 
 <img
 src="diploma.jpeg"
-alt="Установка видеонаблюдения"
+alt="Видеонаблюдение для магазина"
 onclick="openImage(this.src)">
 
-</div>
-
-<div class="object-text">
+<div class="work-info">
 
 <h3>
-Объект №1
+🏪 Видеонаблюдение для магазина
 </h3>
 
 <p>
-Монтаж системы видеонаблюдения.
+Монтаж системы видеонаблюдения
+для контроля и безопасности магазина.
 </p>
 
-<span class="object-tag">
-📹 Видеонаблюдение
-</span>
-
 </div>
 
 </div>
 
 
-<div class="object">
-
-<div class="object-photo">
+<div class="work-slide">
 
 <img
 src="diploma%20(1).jpeg"
-alt="Установка камер"
+alt="Безопасность вещевого магазина"
 onclick="openImage(this.src)">
 
-</div>
-
-<div class="object-text">
+<div class="work-info">
 
 <h3>
-Объект №2
+🛍️ Безопасность вещевого магазина
 </h3>
 
 <p>
-Установка камер видеонаблюдения.
+Установка камер для контроля
+торгового пространства.
 </p>
 
-<span class="object-tag">
-📹 Камеры
-</span>
-
 </div>
 
 </div>
 
 
-<div class="object">
-
-<div class="object-photo">
+<div class="work-slide">
 
 <img
 src="diploma%20(2).jpeg"
-alt="Монтаж камер"
+alt="Видеонаблюдение в строительном магазине"
 onclick="openImage(this.src)">
 
-</div>
-
-<div class="object-text">
+<div class="work-info">
 
 <h3>
-Объект №3
+🧱 Видеонаблюдение в строительном магазине
 </h3>
 
 <p>
-Монтаж оборудования видеонаблюдения.
+Монтаж системы безопасности
+для торгового объекта.
 </p>
 
-<span class="object-tag">
-📹 Монтаж
-</span>
-
 </div>
 
 </div>
 
 
-<div class="object">
-
-<div class="object-photo">
+<div class="work-slide">
 
 <img
 src="diploma%20(3).jpeg"
-alt="Работа специалистов"
+alt="Безопасность подъезда"
 onclick="openImage(this.src)">
 
-</div>
-
-<div class="object-text">
+<div class="work-info">
 
 <h3>
-Объект №4
+🏢 Безопасность подъезда многоэтажного дома
 </h3>
 
 <p>
-Работа специалистов SecurLineUz.
+Установка системы видеонаблюдения
+для контроля входной зоны.
 </p>
 
-<span class="object-tag">
-👨‍🔧 Наша команда
-</span>
-
 </div>
 
 </div>
 
 
-<div class="object">
-
-<div class="object-photo">
+<div class="work-slide">
 
 <img
 src="diploma%20(4).jpeg"
-alt="Система безопасности"
+alt="Видеонаблюдение для офиса"
 onclick="openImage(this.src)">
 
-</div>
-
-<div class="object-text">
+<div class="work-info">
 
 <h3>
-Объект №5
+💼 Видеонаблюдение для офиса
 </h3>
 
 <p>
-Монтаж системы безопасности объекта.
+Монтаж системы безопасности
+для офисного помещения.
 </p>
 
-<span class="object-tag">
-🛡️ Безопасность
-</span>
-
 </div>
 
 </div>
 
+
+</div>
+
+
+<button
+class="slider-arrow slider-prev"
+onclick="previousSlide()"
+aria-label="Предыдущая фотография">
+‹
+</button>
+
+
+<button
+class="slider-arrow slider-next"
+onclick="nextSlide()"
+aria-label="Следующая фотография">
+›
+</button>
+
+
+<div
+class="slider-dots"
+id="sliderDots">
+</div>
 
 </div>
 
@@ -863,9 +896,7 @@ onclick="openImage(this.src)">
 
 <div class="section-title">
 
-<h2>
-🏆 Наш сертификат
-</h2>
+<h2>🏆 Наш сертификат</h2>
 
 <p>
 Подтверждение профессионализма SecurLineUz
@@ -884,9 +915,7 @@ alt="Сертификат SecurLineUz">
 
 <div class="certificate-text">
 
-<h3>
-🏆 Сертификат
-</h3>
+<h3>🏆 Сертификат</h3>
 
 <p>
 Нажмите на изображение, чтобы посмотреть крупнее
@@ -899,7 +928,7 @@ alt="Сертификат SecurLineUz">
 </section>
 
 
-<!-- ПРОСМОТР ФОТО -->
+<!-- MODAL -->
 
 <div
 class="image-modal"
@@ -937,9 +966,7 @@ alt="Просмотр изображения">
 class="cta-button"
 href="https://t.me/SecurLineUzBot"
 target="_blank">
-
 ✈️ Написать в Telegram
-
 </a>
 
 </div>
@@ -953,9 +980,7 @@ id="request">
 
 <div class="section-title">
 
-<h2>
-📞 Оставить заявку
-</h2>
+<h2>📞 Оставить заявку</h2>
 
 <p>
 Расскажите, какая система безопасности вам необходима
@@ -988,9 +1013,7 @@ required></textarea>
 <button
 type="submit"
 id="submitButton">
-
 Отправить заявку
-
 </button>
 
 </form>
@@ -1021,9 +1044,10 @@ id="submitButton">
 
 <script>
 
+/* ЗАЯВКА */
+
 const GOOGLE_SCRIPT_URL =
 "https://script.google.com/macros/s/AKfycbyj4FruRd3JzYOutyoV88OLIPFwW4oaOiZyvWauOoaRSYeMsRN9q9RGmWC3GyxFlFC2/exec";
-
 
 const form =
 document.getElementById("requestForm");
@@ -1031,97 +1055,66 @@ document.getElementById("requestForm");
 const submitButton =
 document.getElementById("submitButton");
 
-
 form.addEventListener(
 "submit",
 async function(event) {
 
 event.preventDefault();
 
-
 const name =
-form.querySelector(
-'[name="name"]'
-).value.trim();
-
+form.querySelector('[name="name"]').value.trim();
 
 const phone =
-form.querySelector(
-'[name="phone"]'
-).value.trim();
-
+form.querySelector('[name="phone"]').value.trim();
 
 const message =
-form.querySelector(
-'[name="message"]'
-).value.trim();
-
+form.querySelector('[name="message"]').value.trim();
 
 if (!name || !phone || !message) {
 
-alert(
-"Пожалуйста, заполните все поля."
-);
+alert("Пожалуйста, заполните все поля.");
 
 return;
 
 }
-
 
 submitButton.disabled = true;
 
 submitButton.textContent =
 "Отправляем...";
 
-
 try {
 
 await fetch(
 GOOGLE_SCRIPT_URL,
 {
-
 method: "POST",
-
 mode: "no-cors",
-
 headers: {
-
 "Content-Type":
 "text/plain;charset=utf-8"
-
 },
-
 body: JSON.stringify({
-
 name: name,
-
 phone: phone,
-
 message: message
-
 })
-
 }
 );
-
 
 alert(
 "✅ Заявка отправлена! Мы скоро свяжемся с вами."
 );
 
-
 form.reset();
-
 
 } catch (error) {
 
 console.error(error);
 
-
 alert(
 "❌ Не удалось отправить заявку. Попробуйте ещё раз."
 );
-
 
 } finally {
 
@@ -1132,11 +1125,192 @@ submitButton.textContent =
 
 }
 
+});
+
+
+/* КАРУСЕЛЬ */
+
+const track =
+document.getElementById("worksTrack");
+
+const slides =
+document.querySelectorAll(".work-slide");
+
+const dotsContainer =
+document.getElementById("sliderDots");
+
+let currentSlide = 0;
+
+let autoSlide;
+
+
+slides.forEach(function(_, index) {
+
+const dot =
+document.createElement("button");
+
+dot.className = "slider-dot";
+
+dot.setAttribute(
+"aria-label",
+"Открыть фотографию " + (index + 1)
+);
+
+dot.addEventListener(
+"click",
+function() {
+
+goToSlide(index);
+
+startAutoSlide();
+
+}
+);
+
+dotsContainer.appendChild(dot);
+
+});
+
+
+const dots =
+document.querySelectorAll(".slider-dot");
+
+
+function updateSlider() {
+
+track.style.transform =
+"translateX(-" +
+(currentSlide * 100) +
+"%)";
+
+dots.forEach(
+function(dot, index) {
+
+dot.classList.toggle(
+"active",
+index === currentSlide
+);
+
+}
+);
+
+}
+
+
+function goToSlide(index) {
+
+currentSlide =
+(index + slides.length) %
+slides.length;
+
+updateSlider();
+
+}
+
+
+function nextSlide() {
+
+goToSlide(currentSlide + 1);
+
+}
+
+
+function previousSlide() {
+
+goToSlide(currentSlide - 1);
+
+}
+
+
+function startAutoSlide() {
+
+clearInterval(autoSlide);
+
+autoSlide =
+setInterval(
+nextSlide,
+4500
+);
+
+}
+
+
+updateSlider();
+
+startAutoSlide();
+
+
+/* ОСТАНОВКА АВТОПРОКРУТКИ */
+
+const slider =
+document.querySelector(".works-slider");
+
+slider.addEventListener(
+"mouseenter",
+function() {
+clearInterval(autoSlide);
+}
+);
+
+slider.addEventListener(
+"mouseleave",
+function() {
+startAutoSlide();
 }
 );
 
 
-/* ПРОСМОТР ИЗОБРАЖЕНИЙ */
+/* СВАЙП НА ТЕЛЕФОНЕ */
+
+let touchStartX = 0;
+let touchEndX = 0;
+
+slider.addEventListener(
+"touchstart",
+function(event) {
+
+touchStartX =
+event.changedTouches[0].screenX;
+
+clearInterval(autoSlide);
+
+},
+{passive: true}
+);
+
+
+slider.addEventListener(
+"touchend",
+function(event) {
+
+touchEndX =
+event.changedTouches[0].screenX;
+
+const difference =
+touchStartX - touchEndX;
+
+if (Math.abs(difference) > 50) {
+
+if (difference > 0) {
+
+nextSlide();
+
+} else {
+
+previousSlide();
+
+}
+
+}
+
+startAutoSlide();
+
+},
+{passive: true}
+);
+
+
+/* ПРОСМОТР ФОТО */
 
 function openImage(src) {
 
@@ -1145,7 +1319,6 @@ document.getElementById("imageModal");
 
 const modalImage =
 document.getElementById("modalImage");
-
 
 modalImage.src = src;
 
@@ -1160,21 +1333,15 @@ document.body.style.overflow =
 function closeImage(event) {
 
 if (event) {
-
 event.stopPropagation();
-
 }
-
 
 const modal =
 document.getElementById("imageModal");
 
-
 modal.classList.remove("active");
 
-document.body.style.overflow =
-"";
-
+document.body.style.overflow = "";
 
 document.getElementById(
 "modalImage"
