@@ -1,109 +1,176 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SecurLineUz</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SecurLineUz — Безопасность вашего объекта</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
+<style>
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        body {
-            font-family: Arial, sans-serif;
-            background: #f4f6f8;
-            color: #17202a;
-        }
+body {
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+    color: #111827;
+}
 
-        header {
-            background: #111827;
-            color: white;
-            padding: 25px 20px;
-            text-align: center;
-        }
+header {
+    background: #111827;
+    color: white;
+    padding: 25px 20px;
+    text-align: center;
+}
 
-        header h1 {
-            font-size: 30px;
-            margin-bottom: 8px;
-        }
+header h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
 
-        header p {
-            color: #d1d5db;
-        }
+header p {
+    color: #d1d5db;
+}
 
-        .hero {
-            background: white;
-            padding: 45px 20px;
-            text-align: center;
-        }
+.hero {
+    background: white;
+    padding: 50px 20px;
+    text-align: center;
+}
 
-        .hero h2 {
-            font-size: 30px;
-            margin-bottom: 15px;
-        }
+.hero h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-        .hero p {
-            max-width: 650px;
-            margin: auto;
-            color: #5b6470;
-            line-height: 1.6;
-        }
+.hero p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 1.6;
+    color: #5b6470;
+}
 
-        .button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 14px 25px;
-            background: #dc2626;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-            font-weight: bold;
-        }
+.button {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 15px 25px;
+    background: #dc2626;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
 
-        .section {
-            padding: 35px 20px;
-            max-width: 1000px;
-            margin: auto;
-        }
+.section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 20px;
+}
 
-        .section h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
+.section h2 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
 
-        .cards {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 18px;
-        }
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+}
 
-        .card {
-            background: white;
-            padding: 25px;
-            border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-        }
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
 
-        .card h3 {
-            margin-bottom: 10px;
-        }
+.card h3 {
+    margin-bottom: 10px;
+}
 
-        .card p {
-            color: #667085;
-            line-height: 1.5;
-        }
+.card p {
+    color: #667085;
+    line-height: 1.5;
+}
 
-        footer {
-            background: #111827;
-            color: white;
-            text-align: center;
-            padding: 25px;
-            margin-top: 20px;
-        }
-    </style>
+.objects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 18px;
+}
+
+.object {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.object-photo {
+    height: 180px;
+    background: #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    font-size: 18px;
+}
+
+.object-text {
+    padding: 18px;
+}
+
+.form {
+    max-width: 600px;
+    margin: auto;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.form input,
+.form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #dc2626;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+footer {
+    background: #111827;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 20px;
+}
+
+footer p {
+    margin: 6px;
+}
+</style>
 </head>
 
 <body>
@@ -121,11 +188,10 @@
         видеонаблюдения и других систем безопасности.
     </p>
 
-    <a class="button" href="#services">Наши услуги</a>
+    <a class="button" href="#request">Оставить заявку</a>
 </section>
 
-<section class="section" id="services">
-
+<section class="section">
     <h2>Наши услуги</h2>
 
     <div class="cards">
@@ -159,12 +225,68 @@
         </div>
 
     </div>
+</section>
 
+<section class="section">
+    <h2>📸 Выполненные объекты</h2>
+
+    <div class="objects">
+
+        <div class="object">
+            <div class="object-photo">
+                Фото объекта
+            </div>
+            <div class="object-text">
+                <h3>Объект №1</h3>
+                <p>Монтаж системы пожарной сигнализации.</p>
+            </div>
+        </div>
+
+        <div class="object">
+            <div class="object-photo">
+                Фото объекта
+            </div>
+            <div class="object-text">
+                <h3>Объект №2</h3>
+                <p>Установка системы видеонаблюдения.</p>
+            </div>
+        </div>
+
+        <div class="object">
+            <div class="object-photo">
+                Фото объекта
+            </div>
+            <div class="object-text">
+                <h3>Объект №3</h3>
+                <p>Комплексная система безопасности.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="request">
+    <h2>📞 Оставить заявку</h2>
+
+    <div class="form">
+
+        <input type="text" placeholder="Ваше имя">
+
+        <input type="tel" placeholder="Номер телефона">
+
+        <textarea placeholder="Что вам необходимо?"></textarea>
+
+        <button type="button">
+            Отправить заявку
+        </button>
+
+    </div>
 </section>
 
 <footer>
-    <p>© 2026 SecurLineUz</p>
+    <p><strong>SecurLineUz</strong></p>
     <p>Безопасность начинается с правильного решения.</p>
+    <p>© 2026 SecurLineUz</p>
 </footer>
 
 </body>
