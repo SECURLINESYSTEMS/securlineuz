@@ -22,6 +22,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
     background: #f5f7fb;
     color: #111827;
+    padding-bottom: 80px;
 }
 
 /* ================= HEADER ================= */
@@ -148,11 +149,6 @@ header {
 
 .button-blue {
     background: #229ed9;
-    color: white;
-}
-
-.button-dark {
-    background: #1f2937;
     color: white;
 }
 
@@ -395,6 +391,38 @@ header {
     color: #64748b;
 }
 
+/* ================= CTA ================= */
+
+.cta {
+    max-width: 1100px;
+    margin: 55px auto;
+    padding: 50px 25px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #dc2626, #991b1b);
+    color: white;
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.cta p {
+    color: #fee2e2;
+    margin-bottom: 25px;
+}
+
+.cta-button {
+    display: inline-block;
+    background: white;
+    color: #b91c1c;
+    padding: 14px 25px;
+    border-radius: 14px;
+    text-decoration: none;
+    font-weight: 800;
+}
+
 /* ================= CONTACTS ================= */
 
 .contacts-section {
@@ -441,7 +469,6 @@ header {
 
 .contact-card:hover {
     transform: translateY(-5px);
-    background: #263449;
 }
 
 .contact-icon {
@@ -455,38 +482,6 @@ header {
 
 .contact-card p {
     color: #cbd5e1;
-}
-
-/* ================= CTA ================= */
-
-.cta {
-    max-width: 1100px;
-    margin: 55px auto;
-    padding: 50px 25px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #dc2626, #991b1b);
-    color: white;
-    text-align: center;
-}
-
-.cta h2 {
-    font-size: 30px;
-    margin-bottom: 12px;
-}
-
-.cta p {
-    color: #fee2e2;
-    margin-bottom: 25px;
-}
-
-.cta-button {
-    display: inline-block;
-    background: white;
-    color: #b91c1c;
-    padding: 14px 25px;
-    border-radius: 14px;
-    text-decoration: none;
-    font-weight: 800;
 }
 
 /* ================= FORM ================= */
@@ -564,6 +559,73 @@ header {
     color: white;
     font-size: 45px;
     cursor: pointer;
+}
+
+/* ================= FLOATING BUTTONS ================= */
+
+.floating-contact {
+    position: fixed;
+    left: 50%;
+    bottom: 12px;
+    transform: translateX(-50%);
+    z-index: 5000;
+
+    display: flex;
+    gap: 7px;
+
+    width: min(500px, calc(100% - 20px));
+
+    padding: 8px;
+
+    background: rgba(15,23,42,0.95);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 18px;
+
+    box-shadow: 0 10px 35px rgba(0,0,0,0.3);
+
+    backdrop-filter: blur(12px);
+}
+
+.floating-contact a {
+    flex: 1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 8px;
+
+    border-radius: 13px;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.2s;
+}
+
+.floating-contact a:hover {
+    transform: translateY(-2px);
+}
+
+.float-call {
+    background: #16a34a;
+}
+
+.float-telegram {
+    background: #229ed9;
+}
+
+.float-instagram {
+    background: linear-gradient(
+        135deg,
+        #833ab4,
+        #fd1d1d,
+        #fcb045
+    );
 }
 
 /* ================= FOOTER ================= */
@@ -679,6 +741,18 @@ footer strong {
 
     .cta {
         margin: 45px 15px;
+    }
+
+    .floating-contact {
+        bottom: 8px;
+        width: calc(100% - 16px);
+        gap: 5px;
+        padding: 7px;
+    }
+
+    .floating-contact a {
+        padding: 11px 3px;
+        font-size: 11px;
     }
 }
 
@@ -958,8 +1032,6 @@ class="works-track"
 id="worksTrack">
 
 
-<!-- 1 -->
-
 <div class="work-slide">
 
 <img
@@ -982,8 +1054,6 @@ onclick="openImage(this.src)">
 
 </div>
 
-
-<!-- 2 -->
 
 <div class="work-slide">
 
@@ -1008,8 +1078,6 @@ onclick="openImage(this.src)">
 </div>
 
 
-<!-- 3 -->
-
 <div class="work-slide">
 
 <img
@@ -1033,8 +1101,6 @@ onclick="openImage(this.src)">
 </div>
 
 
-<!-- 4 -->
-
 <div class="work-slide">
 
 <img
@@ -1057,8 +1123,6 @@ onclick="openImage(this.src)">
 
 </div>
 
-
-<!-- 5 -->
 
 <div class="work-slide">
 
@@ -1347,6 +1411,39 @@ alt="Просмотр изображения">
 </div>
 
 
+<!-- ================= FLOATING CONTACT ================= -->
+
+<div class="floating-contact">
+
+<a
+class="float-call"
+href="tel:+998950214334">
+
+📞 Позвонить
+
+</a>
+
+<a
+class="float-telegram"
+href="https://t.me/SecurLineUzBot"
+target="_blank">
+
+✈️ Telegram
+
+</a>
+
+<a
+class="float-instagram"
+href="https://www.instagram.com/securlineuz/"
+target="_blank">
+
+📸 Instagram
+
+</a>
+
+</div>
+
+
 <!-- ================= FOOTER ================= -->
 
 <footer>
@@ -1552,4 +1649,169 @@ updateSlider();
 
 function nextSlide() {
 
-goToSli
+goToSlide(currentSlide + 1);
+
+}
+
+
+function previousSlide() {
+
+goToSlide(currentSlide - 1);
+
+}
+
+
+function startAutoSlide() {
+
+clearInterval(autoSlide);
+
+autoSlide =
+setInterval(
+nextSlide,
+4500
+);
+
+}
+
+
+updateSlider();
+
+startAutoSlide();
+
+
+/* ================= PAUSE ================= */
+
+const slider =
+document.querySelector(".works-slider");
+
+
+slider.addEventListener(
+"mouseenter",
+function() {
+
+clearInterval(autoSlide);
+
+}
+);
+
+
+slider.addEventListener(
+"mouseleave",
+function() {
+
+startAutoSlide();
+
+}
+);
+
+
+/* ================= SWIPE ================= */
+
+let touchStartX = 0;
+
+
+slider.addEventListener(
+"touchstart",
+function(event) {
+
+touchStartX =
+event.changedTouches[0].screenX;
+
+clearInterval(autoSlide);
+
+},
+{passive: true}
+);
+
+
+slider.addEventListener(
+"touchend",
+function(event) {
+
+const touchEndX =
+event.changedTouches[0].screenX;
+
+const difference =
+touchStartX - touchEndX;
+
+
+if (Math.abs(difference) > 50) {
+
+if (difference > 0) {
+
+nextSlide();
+
+} else {
+
+previousSlide();
+
+}
+
+}
+
+
+startAutoSlide();
+
+},
+{passive: true}
+);
+
+
+/* ================= IMAGE MODAL ================= */
+
+function openImage(src) {
+
+const modal =
+document.getElementById("imageModal");
+
+const modalImage =
+document.getElementById("modalImage");
+
+modalImage.src = src;
+
+modal.classList.add("active");
+
+document.body.style.overflow =
+"hidden";
+
+}
+
+
+function closeImage(event) {
+
+if (event) {
+event.stopPropagation();
+}
+
+const modal =
+document.getElementById("imageModal");
+
+modal.classList.remove("active");
+
+document.body.style.overflow =
+"";
+
+document.getElementById(
+"modalImage"
+).src = "";
+
+}
+
+
+document.addEventListener(
+"keydown",
+function(event) {
+
+if (event.key === "Escape") {
+
+closeImage();
+
+}
+
+}
+);
+
+</script>
+
+</body>
+</html>
