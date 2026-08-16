@@ -595,7 +595,6 @@ footer strong {
 
     <div class="objects">
 
-
         <div class="object">
 
             <div class="object-photo">
@@ -712,24 +711,30 @@ footer strong {
     </div>
 
 
-    <div class="form">
+    <form class="form" id="requestForm">
 
         <input
             type="text"
-            placeholder="Ваше имя">
+            name="name"
+            placeholder="Ваше имя"
+            required>
 
         <input
             type="tel"
-            placeholder="Номер телефона">
+            name="phone"
+            placeholder="Номер телефона"
+            required>
 
         <textarea
-            placeholder="Что вам необходимо?"></textarea>
+            name="message"
+            placeholder="Что вам необходимо?"
+            required></textarea>
 
-        <button type="button">
+        <button type="submit" id="submitButton">
             Отправить заявку
         </button>
 
-    </div>
+    </form>
 
 </section>
 
@@ -749,6 +754,67 @@ footer strong {
     </p>
 
 </footer>
+
+
+<script>
+
+const GOOGLE_SCRIPT_URL =
+"https://script.google.com/macros/s/AKfycbyj4FruRd3JzYOutyoV88OLIPFwW4oaOiZyvWauOoaRSYeMsRN9q9RGmWC3GyxFlFC2/exec";
+
+const form = document.getElementById("requestForm");
+const submitButton = document.getElementById("submitButton");
+
+form.addEventListener("submit", async function(event) {
+
+    event.preventDefault();
+
+    const name = form.querySelector('[name="name"]').value.trim();
+    const phone = form.querySelector('[name="phone"]').value.trim();
+    const message = form.querySelector('[name="message"]').value.trim();
+
+    if (!name || !phone || !message) {
+        alert("Пожалуйста, заполните все поля.");
+        return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = "Отправляем...";
+
+    try {
+
+        await fetch(GOOGLE_SCRIPT_URL, {
+            method: "POST",
+            mode: "no-cors",
+            headers: {
+                "Content-Type": "text/plain;charset=utf-8"
+            },
+            body: JSON.stringify({
+                name: name,
+                phone: phone,
+                message: message
+            })
+        });
+
+        alert("✅ Заявка отправлена! Мы скоро свяжемся с вами.");
+
+        form.reset();
+
+    } catch (error) {
+
+        console.error(error);
+
+        alert("❌ Не удалось отправить заявку. Попробуйте ещё раз.");
+
+    } finally {
+
+        submitButton.disabled = false;
+        submitButton.textContent = "Отправить заявку";
+
+    }
+
+});
+
+</script>
 
 </body>
 </html>
