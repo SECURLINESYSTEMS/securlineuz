@@ -23,12 +23,12 @@ body {
     color: #111827;
 }
 
-/* ===== HEADER ===== */
+/* HEADER */
 
 header {
-    background: linear-gradient(135deg, #111827, #1e293b);
+    background: #111827;
     color: white;
-    padding: 18px 20px;
+    padding: 15px 20px;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -79,11 +79,11 @@ header {
     font-size: 14px;
 }
 
-/* ===== HERO ===== */
+/* HERO */
 
 .hero {
     background:
-        radial-gradient(circle at top right, rgba(220,38,38,0.25), transparent 35%),
+        radial-gradient(circle at top right, rgba(220,38,38,0.28), transparent 35%),
         linear-gradient(135deg, #0f172a, #111827);
     color: white;
     padding: 75px 20px 80px;
@@ -106,7 +106,7 @@ header {
 }
 
 .hero h2 {
-    font-size: clamp(34px, 7vw, 58px);
+    font-size: clamp(36px, 7vw, 58px);
     line-height: 1.05;
     margin-bottom: 20px;
 }
@@ -154,7 +154,7 @@ header {
     transform: translateY(-2px);
 }
 
-/* ===== SECTIONS ===== */
+/* SECTIONS */
 
 .section {
     max-width: 1100px;
@@ -176,7 +176,7 @@ header {
     color: #64748b;
 }
 
-/* ===== SERVICES ===== */
+/* SERVICES */
 
 .cards {
     display: grid;
@@ -195,7 +195,6 @@ header {
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(15,23,42,0.12);
 }
 
 .card-icon {
@@ -213,7 +212,7 @@ header {
     line-height: 1.6;
 }
 
-/* ===== OBJECTS ===== */
+/* OBJECTS */
 
 .objects {
     display: grid;
@@ -236,8 +235,7 @@ header {
 
 .object-photo {
     height: 230px;
-    background:
-        linear-gradient(135deg, #1e293b, #334155);
+    background: linear-gradient(135deg, #1e293b, #334155);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -269,7 +267,7 @@ header {
     font-weight: 700;
 }
 
-/* ===== CTA ===== */
+/* CTA */
 
 .cta {
     max-width: 1100px;
@@ -301,7 +299,7 @@ header {
     font-weight: 800;
 }
 
-/* ===== FORM ===== */
+/* FORM */
 
 .form {
     max-width: 600px;
@@ -323,11 +321,6 @@ header {
     outline: none;
 }
 
-.form input:focus,
-.form textarea:focus {
-    border-color: #229ed9;
-}
-
 .form textarea {
     min-height: 120px;
     resize: vertical;
@@ -335,4 +328,427 @@ header {
 
 .form button {
     width: 100%;
-    padding
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: #dc2626;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* FOOTER */
+
+footer {
+    background: #0f172a;
+    color: white;
+    text-align: center;
+    padding: 35px 20px;
+}
+
+footer p {
+    margin: 7px;
+    color: #94a3b8;
+}
+
+footer strong {
+    color: white;
+    font-size: 20px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .objects {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 550px) {
+
+    .header-inner {
+        gap: 10px;
+    }
+
+    .logo h1 {
+        font-size: 17px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .telegram-top {
+        padding: 9px 11px;
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 55px 18px 60px;
+    }
+
+    .hero h2 {
+        font-size: 39px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .section {
+        padding: 45px 15px;
+    }
+
+    .section-title h2 {
+        font-size: 28px;
+    }
+
+    .cta {
+        margin: 10px 15px 45px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="header-inner">
+
+        <div class="logo">
+
+            <div class="logo-icon">
+                🛡️
+            </div>
+
+            <div>
+                <h1>SECURLINEUZ</h1>
+                <p>Системы безопасности</p>
+            </div>
+
+        </div>
+
+        <a
+            class="telegram-top"
+            href="https://t.me/SecurLineUzBot"
+            target="_blank">
+            ✈️ Telegram
+        </a>
+
+    </div>
+
+</header>
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            🔥 Профессиональная безопасность
+        </div>
+
+        <h2>
+            Защитим ваш <span>объект</span>
+        </h2>
+
+        <p>
+            Проектирование, монтаж и обслуживание пожарной сигнализации,
+            видеонаблюдения и комплексных систем безопасности.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a
+                class="button button-red"
+                href="#request">
+                📞 Оставить заявку
+            </a>
+
+            <a
+                class="button button-blue"
+                href="https://t.me/SecurLineUzBot"
+                target="_blank">
+                ✈️ Написать в Telegram
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>Наши услуги</h2>
+
+        <p>
+            Комплексная защита вашего бизнеса и объекта
+        </p>
+
+    </div>
+
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="card-icon">
+                🔥
+            </div>
+
+            <h3>
+                Пожарная сигнализация
+            </h3>
+
+            <p>
+                Проектирование и монтаж систем пожарной сигнализации под ключ.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                📹
+            </div>
+
+            <h3>
+                Видеонаблюдение
+            </h3>
+
+            <p>
+                Установка современных систем видеонаблюдения для бизнеса.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                🛡️
+            </div>
+
+            <h3>
+                Аудит безопасности
+            </h3>
+
+            <p>
+                Проверка объекта и подготовка к проверкам МЧС.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="card-icon">
+                ⚙️
+            </div>
+
+            <h3>
+                Оборудование
+            </h3>
+
+            <p>
+                Поставка сертифицированного оборудования для систем безопасности.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section">
+
+    <div class="section-title">
+
+        <h2>
+            📸 Выполненные объекты
+        </h2>
+
+        <p>
+            Наш опыт — ваша уверенность в результате
+        </p>
+
+    </div>
+
+
+    <div class="objects">
+
+
+        <div class="object">
+
+            <div class="object-photo">
+                🔥
+            </div>
+
+            <div class="object-text">
+
+                <h3>
+                    Объект №1
+                </h3>
+
+                <p>
+                    Монтаж системы пожарной сигнализации.
+                </p>
+
+                <span class="object-tag">
+                    Пожарная безопасность
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="object">
+
+            <div class="object-photo">
+                📹
+            </div>
+
+            <div class="object-text">
+
+                <h3>
+                    Объект №2
+                </h3>
+
+                <p>
+                    Установка современной системы видеонаблюдения.
+                </p>
+
+                <span class="object-tag">
+                    Видеонаблюдение
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="object">
+
+            <div class="object-photo">
+                🛡️
+            </div>
+
+            <div class="object-text">
+
+                <h3>
+                    Объект №3
+                </h3>
+
+                <p>
+                    Комплексная система безопасности объекта.
+                </p>
+
+                <span class="object-tag">
+                    Комплексная защита
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<div class="cta">
+
+    <h2>
+        Нужна защита объекта?
+    </h2>
+
+    <p>
+        Оставьте заявку — специалисты SecurLineUz свяжутся с вами.
+    </p>
+
+    <a
+        class="cta-button"
+        href="https://t.me/SecurLineUzBot"
+        target="_blank">
+        ✈️ Написать в Telegram
+    </a>
+
+</div>
+
+
+<section
+    class="section"
+    id="request">
+
+    <div class="section-title">
+
+        <h2>
+            📞 Оставить заявку
+        </h2>
+
+        <p>
+            Расскажите, какая система безопасности вам необходима
+        </p>
+
+    </div>
+
+
+    <div class="form">
+
+        <input
+            type="text"
+            placeholder="Ваше имя">
+
+        <input
+            type="tel"
+            placeholder="Номер телефона">
+
+        <textarea
+            placeholder="Что вам необходимо?"></textarea>
+
+        <button type="button">
+            Отправить заявку
+        </button>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p>
+        <strong>SecurLineUz</strong>
+    </p>
+
+    <p>
+        Безопасность начинается с правильного решения.
+    </p>
+
+    <p>
+        © 2026 SecurLineUz
+    </p>
+
+</footer>
+
+</body>
+</html>
