@@ -1057,6 +1057,8 @@ bottom:14px;
 
 }
 
+
+.langBox{position:relative;margin-left:auto;margin-right:14px}.langBtn{background:#fff;border:1px solid #d9e1e7;padding:9px 12px;font-size:11px;font-weight:800;cursor:pointer}.langMenu{position:absolute;right:0;top:43px;background:#fff;border:1px solid #d9e1e7;box-shadow:0 12px 30px rgba(0,0,0,.12);min-width:135px;display:none;z-index:1200}.langMenu.open{display:block}.langMenu button{display:block;width:100%;padding:10px 12px;background:#fff;border:0;text-align:left;font-size:11px;cursor:pointer}.langMenu button:hover{background:#f2f6f9}@media(max-width:600px){.langBox{margin-right:8px}.langBtn{padding:8px 9px}}
 </style>
 </head>
 
@@ -1077,6 +1079,15 @@ SECUR<span>LINE</span>UZ
 <a href="#process">Процесс</a>
 <a href="#contact">Контакты</a>
 </nav>
+
+<div class="langBox">
+<button class="langBtn" onclick="toggleSecLang()" id="secLangBtn">🇷🇺 RU ▾</button>
+<div class="langMenu" id="secLangMenu">
+<button onclick="setSecLang('ru','🇷🇺 RU')">🇷🇺 Русский</button>
+<button onclick="setSecLang('uz','🇺🇿 UZ')">🇺🇿 O‘zbek</button>
+<button onclick="setSecLang('en','🇬🇧 EN')">🇬🇧 English</button>
+</div>
+</div>
 
 <a class="header-button" href="#contact">
 ОСТАВИТЬ ЗАЯВКУ
@@ -1819,7 +1830,7 @@ TELEGRAM →
 
 <a
 class="contact-link"
-href="https://instagram.com/"
+href="https://www.instagram.com/securlineuz/"
 target="_blank"
 >
 INSTAGRAM →
@@ -1885,7 +1896,7 @@ required
 
 <div class="float">
 
-<a href="tel:+998000000000">
+<a href="tel:+998950214334">
 TEL
 </a>
 
@@ -1921,5 +1932,49 @@ this.reset
 </script>
 
 
+
+<script>
+const SEC_LANG={
+"Услуги":{uz:"Xizmatlar",en:"Services"},"Проекты":{uz:"Loyihalar",en:"Projects"},"Команда":{uz:"Jamoa",en:"Team"},"Процесс":{uz:"Jarayon",en:"Process"},"Контакты":{uz:"Aloqa",en:"Contacts"},"ОСТАВИТЬ ЗАЯВКУ":{uz:"ARIZA QOLDIRISH",en:"REQUEST A QUOTE"},
+"БЕЗОПАСНОСТЬ":{uz:"XAVFSIZLIK",en:"SECURITY"},"КОТОРОЙ":{uz:"ISHONCH",en:"YOU CAN TRUST"},"ДОВЕРЯЮТ":{uz:"QILADI",en:"TRUST"},
+"Проектируем и устанавливаем современные":{uz:"Zamonaviy",en:"We design and install modern"},"системы видеонаблюдения, охраны,":{uz:"videokuzatuv, qo‘riqlash,",en:"video surveillance, security,"},"контроля доступа и пожарной безопасности":{uz:"kirish nazorati va yong‘in xavfsizligi",en:"access control and fire safety"},"для бизнеса и частных объектов.":{uz:"biznes va xususiy obyektlar uchun.",en:"for businesses and private properties."},
+"ПОЛУЧИТЬ КОНСУЛЬТАЦИЮ":{uz:"MASLAHAT OLISH",en:"GET A CONSULTATION"},"СМОТРЕТЬ ПРОЕКТЫ →":{uz:"LOYIHALARNI KO‘RISH →",en:"VIEW PROJECTS →"},"Профессиональный монтаж":{uz:"Professional montaj",en:"Professional installation"},
+"КОМПЛЕКСНЫЕ":{uz:"KOMPLEKS",en:"COMPREHENSIVE"},"РЕШЕНИЯ":{uz:"YECHIMLAR",en:"SOLUTIONS"},"От одной камеры до полной системы":{uz:"Bitta kameradan to‘liq tizimgacha",en:"From one camera to a complete system"},"безопасности объекта. Подбираем":{uz:"obyekt xavfsizligi uchun. Biz",en:"for facility security. We select"},"решение под реальные задачи.":{uz:"haqiqiy vazifalarga mos yechim tanlaymiz.",en:"solutions for real requirements."},
+"Видеонаблюдение":{uz:"Videokuzatuv",en:"Video surveillance"},"Камеры, видеорегистраторы,":{uz:"Kameralar, videoregistratorlar,",en:"Cameras, recorders,"},"удалённый просмотр и контроль":{uz:"masofadan ko‘rish va nazorat",en:"remote viewing and control"},"объекта в режиме реального времени.":{uz:"real vaqt rejimida.",en:"in real time."},
+"Охранные системы":{uz:"Qo‘riqlash tizimlari",en:"Security systems"},"Сигнализация, датчики движения":{uz:"Signalizatsiya, harakat datchiklari",en:"Alarms, motion sensors"},"и современные решения для защиты":{uz:"va himoya uchun zamonaviy yechimlar",en:"and modern protection solutions"},"помещений и территории.":{uz:"binolar va hududlar uchun.",en:"for premises and grounds."},
+"Контроль доступа":{uz:"Kirish nazorati",en:"Access control"},"Домофоны, электронные замки,":{uz:"Domofonlar, elektron qulflar,",en:"Intercoms, electronic locks,"},"карты, брелоки и управление":{uz:"kartalar, breloklar va boshqaruv",en:"cards, key fobs and management"},"доступом сотрудников.":{uz:"xodimlar kirishini.",en:"of employee access."},
+"Пожарная безопасность":{uz:"Yong‘in xavfsizligi",en:"Fire safety"},"Системы обнаружения пожара,":{uz:"Yong‘inni aniqlash tizimlari,",en:"Fire detection systems,"},"оповещения и комплексной":{uz:"ogohlantirish va kompleks",en:"notification and comprehensive"},"защиты объекта.":{uz:"obyekt himoyasi.",en:"facility protection."},
+"НЕ ПРОСТО УСТАНОВКА.":{uz:"SHUNCHAKI O‘RNATISH EMAS.",en:"NOT JUST INSTALLATION."},"МЫ СОЗДАЁМ":{uz:"BIZ YARATAMIZ",en:"WE CREATE"},"СИСТЕМУ.":{uz:"TIZIMNI.",en:"A SYSTEM."},"Комплексный подход к безопасности:":{uz:"Xavfsizlikka kompleks yondashuv:",en:"A comprehensive approach to security:"},"анализ объекта, оборудование,":{uz:"obyekt tahlili, uskunalar,",en:"site analysis, equipment,"},"монтаж, настройка и результат.":{uz:"montaj, sozlash va natija.",en:"installation, configuration and results."},"Контроль и защита":{uz:"Nazorat va himoya",en:"Control and protection"},"Комплексный подход":{uz:"Kompleks yondashuv",en:"Comprehensive approach"},"Индивидуальное решение":{uz:"Individual yechim",en:"Individual solution"},"Работаем по Узбекистану":{uz:"O‘zbekiston bo‘ylab ishlaymiz",en:"We work across Uzbekistan"},
+"РЕАЛЬНЫЕ":{uz:"HAQIQIY",en:"REAL"},"РАБОТЫ":{uz:"ISHLAR",en:"WORK"},"Небольшая подборка фотографий":{uz:"Jamoamiz ish jarayonidan",en:"A small selection of photos"},"рабочего процесса нашей команды.":{uz:"fotosuratlar.",en:"from our team's work process."},"Монтаж оборудования":{uz:"Uskunalarni montaj qilish",en:"Equipment installation"},"Работа специалистов":{uz:"Mutaxassislar ishi",en:"Specialists at work"},"Монтаж системы":{uz:"Tizim montaji",en:"System installation"},"Установка оборудования":{uz:"Uskunalarni o‘rnatish",en:"Equipment setup"},"ПОСМОТРЕТЬ ВСЕ РАБОТЫ →":{uz:"BARCHA ISHLARNI KO‘RISH →",en:"VIEW ALL WORK →"},
+"ЗА СИСТЕМОЙ":{uz:"TIZIM ORTIDA",en:"BEHIND THE SYSTEM"},"СТОЯТ ЛЮДИ.":{uz:"ODAMLAR TURIBDI.",en:"THERE ARE PEOPLE."},"Наша команда занимается проектированием,":{uz:"Jamoamiz loyihalash,",en:"Our team handles design,"},"монтажом и настройкой систем безопасности.":{uz:"montaj va xavfsizlik tizimlarini sozlash bilan shug‘ullanadi.",en:"installation and configuration of security systems."},"Мы уделяем внимание не только оборудованию,":{uz:"Biz nafaqat uskunaga,",en:"We focus not only on equipment,"},"но и качеству каждого этапа работы.":{uz:"balki ishning har bir bosqichi sifatiga ham e’tibor beramiz.",en:"but also on the quality of every stage."},"Технический подход":{uz:"Texnik yondashuv",en:"Technical approach"},"Аккуратный монтаж":{uz:"Toza montaj",en:"Neat installation"},"Настройка оборудования":{uz:"Uskunani sozlash",en:"Equipment configuration"},"Ответственность за результат":{uz:"Natija uchun mas’uliyat",en:"Responsibility for results"},
+"ОТ ЗАДАЧИ":{uz:"VAZIFADAN",en:"FROM THE TASK"},"ДО ГОТОВОЙ СИСТЕМЫ":{uz:"TAYYOR TIZIMGACHA",en:"TO A READY SYSTEM"},"Обсуждаем объект":{uz:"Obyektni muhokama qilamiz",en:"We discuss the facility"},"Вы рассказываете нам":{uz:"Siz bizga vazifangiz",en:"You tell us about"},"о задаче и особенностях":{uz:"va obyekt xususiyatlarini",en:"the task and specifics"},"вашего объекта.":{uz:"aytasiz.",en:"of your facility."},"Разрабатываем решение":{uz:"Yechim ishlab chiqamiz",en:"We develop a solution"},"Анализируем объект,":{uz:"Obyektni tahlil qilamiz,",en:"We analyze the facility,"},"подбираем оборудование":{uz:"uskunalarni tanlaymiz",en:"select equipment"},"и предлагаем оптимальный вариант.":{uz:"va optimal variantni taklif qilamiz.",en:"and propose the optimal option."},"Устанавливаем":{uz:"O‘rnatamiz",en:"We install"},"Выполняем монтаж,":{uz:"Montaj,",en:"We perform installation,"},"подключение и настройку":{uz:"ulash va sozlashni",en:"connection and configuration"},"системы.":{uz:"amalga oshiramiz.",en:"of the system."},
+"ПОЧЕМУ":{uz:"NEGA",en:"WHY"},"SECURLINEUZ":{uz:"SECURLINEUZ",en:"SECURLINEUZ"},"Профессиональный монтаж":{uz:"Professional montaj",en:"Professional installation"},"Аккуратная установка,":{uz:"Toza o‘rnatish,",en:"Neat installation,"},"правильное подключение":{uz:"to‘g‘ri ulash",en:"proper connection"},"и настройка оборудования.":{uz:"va uskunani sozlash.",en:"and equipment configuration."},"Индивидуальный подход":{uz:"Individual yondashuv",en:"Individual approach"},"Каждый объект анализируется":{uz:"Har bir obyekt alohida",en:"Every facility is analyzed"},"отдельно. Мы не предлагаем":{uz:"tahlil qilinadi. Biz hammaga",en:"separately. We do not offer"},"одинаковые решения всем.":{uz:"bir xil yechim taklif qilmaymiz.",en:"the same solution to everyone."},"Комплексная работа":{uz:"Kompleks ish",en:"Comprehensive work"},"От консультации и подбора":{uz:"Maslahat va uskunani tanlashdan",en:"From consultation and equipment selection"},"оборудования до полностью":{uz:"to to‘liq",en:"to a fully"},"готовой системы.":{uz:"tayyor tizimgacha.",en:"ready system."},
+"ПОДТВЕРЖДАЕМ":{uz:"TASDIQLAYMIZ",en:"WE CONFIRM"},"ПРОФЕССИОНАЛИЗМ":{uz:"PROFESSIONALIZMNI",en:"PROFESSIONALISM"},"Мы стремимся постоянно повышать":{uz:"Biz doimiy ravishda",en:"We constantly strive to improve"},"качество работы и профессиональный":{uz:"ish sifati va professional",en:"work quality and professional"},"уровень команды.":{uz:"jamoa darajasini oshiramiz.",en:"team level."},
+"ГОТОВЫ ОБСУДИТЬ":{uz:"MUHOKAMA QILISHGA",en:"READY TO DISCUSS"},"ВАШ ОБЪЕКТ?":{uz:"TAYYORMISIZ?",en:"YOUR FACILITY?"},"Оставьте заявку. Расскажите,":{uz:"Ariza qoldiring. Bizga",en:"Leave a request. Tell us"},"что необходимо установить,":{uz:"nima o‘rnatish kerakligini ayting,",en:"what needs to be installed,"},"и мы свяжемся с вами.":{uz:"va biz siz bilan bog‘lanamiz.",en:"and we will contact you."},"TELEGRAM →":{uz:"TELEGRAM →",en:"TELEGRAM →"},"INSTAGRAM →":{uz:"INSTAGRAM →",en:"INSTAGRAM →"},"Ваше имя":{uz:"Ismingiz",en:"Your name"},"Номер телефона":{uz:"Telefon raqamingiz",en:"Phone number"},"Что необходимо установить?":{uz:"Nimani o‘rnatish kerak?",en:"What needs to be installed?"},"ОТПРАВИТЬ ЗАЯВКУ →":{uz:"ARIZANI YUBORISH →",en:"SEND REQUEST →"},"Системы безопасности":{uz:"Xavfsizlik tizimlari",en:"Security systems"},"© 2026":{uz:"© 2026",en:"© 2026"},"Партнёр ADAMARKET":{uz:"ADAMARKET hamkori",en:"ADAMARKET partner"},"Ташкент":{uz:"Toshkent",en:"Tashkent"}};
+const secOriginal=new WeakMap();
+const secPlaceholder=new WeakMap();
+function applySecLang(lang){
+ document.documentElement.lang=lang;
+ document.querySelectorAll("body *").forEach(el=>{
+   for(const n of [...el.childNodes]){
+     if(n.nodeType!==3)continue;
+     const trimmed=n.nodeValue.trim();if(!trimmed)continue;
+     if(!secOriginal.has(n))secOriginal.set(n,trimmed);
+     const src=secOriginal.get(n), tr=SEC_LANG[src];
+     if(tr)n.nodeValue=n.nodeValue.replace(trimmed,lang==="ru"?src:(tr[lang]||src));
+   }
+ });
+ document.querySelectorAll("input,textarea").forEach(el=>{
+   if(!secPlaceholder.has(el))secPlaceholder.set(el,el.placeholder||"");
+   const src=secPlaceholder.get(el);const tr=SEC_LANG[src];
+   if(tr)el.placeholder=lang==="ru"?src:(tr[lang]||src);
+ });
+}
+function toggleSecLang(){document.getElementById("secLangMenu").classList.toggle("open")}
+function setSecLang(lang,label){localStorage.setItem("securline_lang",lang);document.getElementById("secLangBtn").textContent=label;document.getElementById("secLangMenu").classList.remove("open");applySecLang(lang)}
+document.addEventListener("click",e=>{if(!e.target.closest(".langBox"))document.getElementById("secLangMenu")?.classList.remove("open")});
+const savedSecLang=localStorage.getItem("securline_lang")||"ru";
+document.addEventListener("DOMContentLoaded",()=>applySecLang(savedSecLang));
+</script>
 </body>
 </html>
