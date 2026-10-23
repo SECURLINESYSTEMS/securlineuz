@@ -1953,12 +1953,14 @@ INSTAGRAM →
 </div>
 
 
-<form class="form" id="form">
+<form class="form" id="form" aria-label="Заявка на консультацию SecurLineUz">
 
 <input
 id="name"
 name="name"
 type="text"
+autocomplete="name"
+aria-label="Ваше имя"
 placeholder="Ваше имя"
 required
 >
@@ -1967,6 +1969,9 @@ required
 id="phone"
 name="phone"
 type="tel"
+autocomplete="tel"
+inputmode="tel"
+aria-label="Номер телефона"
 placeholder="Номер телефона"
 required
 >
@@ -1974,6 +1979,7 @@ required
 <textarea
 id="message"
 name="message"
+aria-label="Что необходимо установить?"
 placeholder="Что необходимо установить?"
 required
 ></textarea>
