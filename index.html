@@ -4,7 +4,43 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<title>SecurLineUz — Системы безопасности</title>
+<title>Системы безопасности в Ташкенте — SecurLineUz</title>
+<meta name="description" content="SecurLineUz: видеонаблюдение, пожарная сигнализация, контроль доступа и слаботочные системы для домов, офисов и предприятий в Ташкенте. Монтаж, настройка и обслуживание.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://securline.uz/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
+<meta property="og:site_name" content="SecurLineUz">
+<meta property="og:title" content="Системы безопасности в Ташкенте — SecurLineUz">
+<meta property="og:description" content="Видеонаблюдение, пожарная сигнализация, контроль доступа и слаботочные системы.">
+<meta property="og:url" content="https://securline.uz/">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://securline.uz/#organization",
+  "name": "SecurLineUz",
+  "url": "https://securline.uz/",
+  "telephone": "+998950214334",
+  "sameAs": [
+    "https://www.instagram.com/securlineuz/",
+    "https://t.me/SecurLineUzBot",
+    "https://t.me/securlinesystems"
+  ],
+  "areaServed": [
+    {"@type": "City", "name": "Tashkent"},
+    {"@type": "Country", "name": "Uzbekistan"}
+  ],
+  "knowsAbout": [
+    "Видеонаблюдение",
+    "Пожарная сигнализация",
+    "Контроль доступа",
+    "Слаботочные системы",
+    "Техническое обслуживание систем безопасности"
+  ]
+}
+</script>
 
 <style>
 
@@ -897,6 +933,16 @@ transform:translateY(-4px);
 }
 
 
+.service-link{
+display:inline-block;
+margin-top:18px;
+font-size:11px;
+font-weight:700;
+letter-spacing:.3px;
+color:#1670b5;
+}
+.service-link:hover{text-decoration:underline}
+
 /* TABLET */
 
 @media(max-width:900px){
@@ -1107,18 +1153,18 @@ SECURITY • TECHNOLOGY • ENGINEERING
 </div>
 
 <h1>
-БЕЗОПАСНОСТЬ
+СИСТЕМЫ
 <br>
-КОТОРОЙ
+БЕЗОПАСНОСТИ
 <br>
-<span>ДОВЕРЯЮТ</span>
+<span>В ТАШКЕНТЕ</span>
 </h1>
 
 <p class="hero-description">
-Проектируем и устанавливаем современные
-системы видеонаблюдения, охраны,
-контроля доступа и пожарной безопасности
-для бизнеса и частных объектов.
+Проектируем, устанавливаем и настраиваем
+видеонаблюдение, пожарную сигнализацию,
+контроль доступа и слаботочные системы
+для домов, офисов и предприятий.
 </p>
 
 <div class="hero-buttons">
@@ -1243,6 +1289,7 @@ ENGINEERING
 удалённый просмотр и контроль
 объекта в режиме реального времени.
 </p>
+<a class="service-link" href="/videonablyudenie.html">Подробнее об услуге →</a>
 
 </div>
 
@@ -1262,6 +1309,7 @@ ENGINEERING
 и современные решения для защиты
 помещений и территории.
 </p>
+<a class="service-link" href="/ohrannye-sistemy.html">Подробнее об услуге →</a>
 
 </div>
 
@@ -1281,6 +1329,7 @@ ENGINEERING
 карты, брелоки и управление
 доступом сотрудников.
 </p>
+<a class="service-link" href="/kontrol-dostupa.html">Подробнее об услуге →</a>
 
 </div>
 
@@ -1300,6 +1349,7 @@ ENGINEERING
 оповещения и комплексной
 защиты объекта.
 </p>
+<a class="service-link" href="/pozharnaya-signalizatsiya.html">Подробнее об услуге →</a>
 
 </div>
 
@@ -1916,24 +1966,24 @@ TG
 
 
 <script>
-
-document
-.getElementById("form")
-.addEventListener("submit",function(e){
-
-e.preventDefault();
-
-const name =
-document.getElementById("name").value;
-
-alert(
-"Спасибо, "+name+"! Заявка принята."
-);
-
-this.reset
-  
+document.getElementById("form").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const phone = document.getElementById("phone").value.trim();
+  const message = document.getElementById("message").value.trim();
+  if (!name || !phone || !message) {
+    alert("Заполните все поля формы.");
+    return;
+  }
+  const text = [
+    "Заявка с сайта SecurLineUz",
+    "Имя: " + name,
+    "Телефон: " + phone,
+    "Задача: " + message
+  ].join("\n");
+  const url = "https://wa.me/998950214334?text=" + encodeURIComponent(text);
+  window.open(url, "_blank", "noopener,noreferrer");
 });
-
 </script>
 
 
